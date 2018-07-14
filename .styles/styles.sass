@@ -1,0 +1,89 @@
+*
+    margin: 0
+    padding: 0
+    
+#game 
+    display: grid
+    grid-template: 20vh 60vh 20vh / 1fr
+
+.panel
+    display: grid
+    grid-template: 1fr / 1fr 1fr
+    justify-items: center
+    align-items: center
+    border: 1px solid black
+    &__img 
+        height: 80%
+    &__stats
+        display: grid
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr)
+        justify-items: center
+        align-items: center
+        width: 100%
+        height: 100%
+
+.stat
+    width: 100%
+    height: 100%
+    display: grid
+    grid-template: 1fr / 1fr 1fr
+    justify-content: space-evenly
+    justify-items: center
+    align-items: center
+    &__img
+        height: 60%
+    &__value
+        font-size: 30px
+
+.dungeons
+    display: grid
+    grid-template: repeat(3,1fr) / repeat(3,1fr)  
+
+$initial-dungeon-background-color: grey
+$hover-background-color: pink
+.dungeon
+    display: grid
+    grid-template: repeat(2,1fr) / repeat(2,1fr)  
+    border: 1px dashed grey
+    cursor: pointer
+    &--closed
+        background-color: $initial-dungeon-background-color
+        &:hover
+            background-color: $hover-background-color
+    &--opened
+        background-color: whit
+        cursor: default
+
+.quadrant
+    display: grid
+    grid-template: 1fr / 1fr
+    justify-items: center
+    align-items: center
+    img 
+        height: 80%
+
+#monster, #treasure
+    cursor: pointer
+    
+main 
+    margin: 3%
+    padding: 5%
+    height: 90vh
+    display: grid
+    grid-template: repeat(6,auto) / 1fr 
+    grid-gap: 20px
+    justify-items: center
+    align-items: center
+    border: 1px solid black
+    border-radius: 10px
+    img 
+        width: 20%
+    a
+        width: 50%
+        height: 100%
+    button 
+        width: 100%
+        height: 80%
+        border-radius: 30px
+        background-color: grey
+        font-size: 20px
