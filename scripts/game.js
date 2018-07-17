@@ -10,25 +10,25 @@ function reset() {
     //document.getElementById('game').setAttribute('style','width: '+window.innerWidth+'px;');
 
     board = new Board();
-    player = new Player();
+    //player = new Player();
     monster = new Monster();
 
 
     // take images from player and monster to display in board
     board.monsterPanel.addImage(monster.url);
-    board.playerPanel.addImage(player.url);
+    //board.playerPanel.addImage(player.url);
     board.setUp();
 
     // define home dungeon
-    document.getElementById(homeId).classList.add('dungeon--home');
+    //document.getElementById(homeId).classList.add('dungeon--home');
 
     // insert player in the first dungeon
-    document.getElementsByClassName('dungeon--home')[0].getElementsByClassName('quadrant3')[0].appendChild(player.element)
-    player.dungeonAt = homeId;
+    //document.getElementsByClassName('dungeon--home')[0].getElementsByClassName('quadrant3')[0].appendChild(player.element)
+    //player.dungeonAt = homeId;
 
     // open home and set first moves
-    board.dungeons.dungeons[homeId].open();
-    updateCanMove();
+    //board.dungeons.dungeons[homeId].open();
+    //updateCanMove();
     
 }
 
