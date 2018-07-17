@@ -10,13 +10,13 @@ function reset() {
     //document.getElementById('game').setAttribute('style','width: '+window.innerWidth+'px;');
 
     board = new Board();
-    //player = new Player();
+    player = new Player();
     monster = new Monster();
 
 
     // take images from player and monster to display in board
     board.monsterPanel.addImage(monster.url);
-    //board.playerPanel.addImage(player.url);
+    board.playerPanel.addImage(player.url);
     board.setUp();
 
     // define home dungeon
