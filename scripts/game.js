@@ -20,15 +20,15 @@ function reset() {
     board.setUp();
 
     // define home dungeon
-    //document.getElementById(homeId).classList.add('dungeon--home');
+    document.getElementById(homeId).classList.add('dungeon--home');
 
     // insert player in the first dungeon
-    //document.getElementsByClassName('dungeon--home')[0].getElementsByClassName('quadrant3')[0].appendChild(player.element)
-    //player.dungeonAt = homeId;
+    document.getElementsByClassName('dungeon--home')[0].getElementsByClassName('quadrant3')[0].appendChild(player.element)
+    player.dungeonAt = homeId;
 
     // open home and set first moves
-    //board.dungeons.dungeons[homeId].open();
-    //updateCanMove();
+    board.dungeons.dungeons[homeId].open();
+    updateCanMove();
     
 }
 

@@ -11,8 +11,7 @@ function Board() {
 
     this.setUp = function() {
         this.element.appendChild(this.monsterPanel.element);
-        //this.element.appendChild(this.dungeons.element);
-        this.element.appendChild(document.createElement('div'));
+        this.element.appendChild(this.dungeons.element);
         this.element.appendChild(this.playerPanel.element);
     };
 
