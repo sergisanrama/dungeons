@@ -7,17 +7,17 @@ reset();
 function reset() {
 
     // create the board, player and monster
-    board = new Board();
-    board.setUp();
+    //document.getElementById('game').setAttribute('style','width: '+window.innerWidth+'px;');
 
+    board = new Board();
     player = new Player();
     monster = new Monster();
+
 
     // take images from player and monster to display in board
     board.monsterPanel.addImage(monster.url);
     board.playerPanel.addImage(player.url);
-
-    // build the board
+    board.setUp();
 
     // define home dungeon
     document.getElementById(homeId).classList.add('dungeon--home');
@@ -29,8 +29,7 @@ function reset() {
     // open home and set first moves
     board.dungeons.dungeons[homeId].open();
     updateCanMove();
-
-
+    
 }
 
 function onOpen(dungeon) {
